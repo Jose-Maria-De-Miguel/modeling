@@ -2,14 +2,17 @@
 """
 Created on Sun May 12 18:04:58 2024
 
-@author: chdem
+@author: Jose M. de Miguel
 """
 import numpy as np
 import matplotlib.pyplot as plt
 
 # Constants
 Sin = 1
-D = 1
+# D = 1 entonces D < mu(si)
+# D = 1.5 entonces D = mu(si)
+# D = 2 entonces D > mu(si)
+D = 2
 a = 1
 muMax = 3
 
@@ -32,8 +35,8 @@ s_func = (D * a) / (muMax - D)
 
 
 # Define the grid
-s = np.linspace(0, 2, 20)
-x = np.linspace(0, 2, 20)
+s = np.linspace(0, 2, 11)
+x = np.linspace(0, 2, 11)
 S, X = np.meshgrid(s, x)
 
 # Calculate the vector components using the functions
